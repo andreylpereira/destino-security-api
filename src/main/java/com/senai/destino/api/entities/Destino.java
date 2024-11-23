@@ -12,13 +12,13 @@ public class Destino {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(nullable = false)
+	 @Column(name = "nome", nullable = false)
 	private String nome;
-	@Column(nullable = false)
+	 @Column(name = "localizacao", nullable = false)
 	private String localizacao;
-	@Column(nullable = false)
+	 @Column(name = "descricao", nullable = false)
 	private String descricao;
-	@Column(nullable = false)
+	 @Column(name = "tipo", nullable = false)
 	private String tipo;
 	private double avaliacao;
 	private int quantidadeAvaliacoes;
