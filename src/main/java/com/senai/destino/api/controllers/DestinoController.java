@@ -27,17 +27,17 @@ public class DestinoController {
 	private DestinoService destinoService;
 
 	@PostMapping("/")
-	public ResponseEntity<Destino> cadastrarDestino(@RequestBody DestinoDTO destinoDTO) {
+	public ResponseEntity<DestinoDTO> cadastrarDestino(@RequestBody DestinoDTO destinoDTO) {
 		return destinoService.cadastrar(destinoDTO);
 	}
 
 	@GetMapping("/")
-	public ResponseEntity<List<Destino>> listarDestinos() {
+	public ResponseEntity<List<DestinoDTO>> listarDestinos() {
 		return destinoService.listarDestinos();
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<Destino> recuperarDestinoPorId(@PathVariable Long id) throws NotFoundException {
+	public ResponseEntity<DestinoDTO> recuperarDestinoPorId(@PathVariable Long id) throws NotFoundException {
 		return destinoService.recuperarDestino(id);
 	}
 
@@ -47,13 +47,13 @@ public class DestinoController {
 	}
 
 	@GetMapping("/pesquisar")
-	public ResponseEntity<List<Destino>> recuperarPorNomeLocalizacao(@RequestParam(required = false) String nome,
+	public ResponseEntity<List<DestinoDTO>> recuperarPorNomeLocalizacao(@RequestParam(required = false) String nome,
 			@RequestParam(required = false) String localizacao) {
 		return destinoService.listarDestinosPorNomeLocalizacao(nome, localizacao);
 	}
 
 	@PatchMapping("/{id}/avaliacao")
-	public ResponseEntity<Destino> avaliarDestino(@RequestParam double nota, @PathVariable Long id)
+	public ResponseEntity<DestinoDTO> avaliarDestino(@RequestParam double nota, @PathVariable Long id)
 			throws NotFoundException {
 		return destinoService.atualizarAvaliacao(nota, id);
 	}
