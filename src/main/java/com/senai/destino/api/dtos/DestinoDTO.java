@@ -6,6 +6,7 @@ public class DestinoDTO {
 	private String localizacao;
 	private String descricao;
 	private String tipo;
+	private double avaliacao;
 	
 	public String getNome() {
 		return nome;
@@ -30,6 +31,12 @@ public class DestinoDTO {
 	}
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
+	}
+	public double getAvaliacao() {
+		return avaliacao;
+	}
+	public void setAvaliacao(double avaliacao) {
+		this.avaliacao = avaliacao;
 	}
 	
 	

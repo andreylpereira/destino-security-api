@@ -1,5 +1,6 @@
 package com.senai.destino.api.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,9 +12,13 @@ public class Destino {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	 @Column(name = "nome", nullable = false)
 	private String nome;
+	 @Column(name = "localizacao", nullable = false)
 	private String localizacao;
+	 @Column(name = "descricao", nullable = false)
 	private String descricao;
+	 @Column(name = "tipo", nullable = false)
 	private String tipo;
 	private double avaliacao;
 	private int quantidadeAvaliacoes;
