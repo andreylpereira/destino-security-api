@@ -1,4 +1,4 @@
-package com.senai.destino.api.config;
+package com.senai.destino.api.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

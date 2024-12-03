@@ -1,4 +1,4 @@
-package com.senai.destino.api.config;
+package com.senai.destino.api.security;
 
 import java.io.IOException;
 

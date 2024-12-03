@@ -10,10 +10,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.senai.destino.api.config.JWTGenerator;
 import com.senai.destino.api.dtos.AuthDTO;
 import com.senai.destino.api.dtos.AuthResponseDTO;
 import com.senai.destino.api.repositories.UsuarioRepository;
+import com.senai.destino.api.security.JWTGenerator;
 
 
 @Service
